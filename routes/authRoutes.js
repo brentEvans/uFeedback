@@ -10,6 +10,7 @@ module.exports = (app) => {
     );
 
     app.get('/auth/google/callback', passport.authenticate('google', { 
+        scope: ['profile', 'email']
         // successRedirect: '/',
         // successFlash: 'Welcome!',
         // failureRedirect: '/auth/google',
