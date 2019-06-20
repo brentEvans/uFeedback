@@ -9,17 +9,18 @@ module.exports = (app) => {
         })
     );
 
-    app.get('/auth/google/callback', passport.authenticate('google', { 
-        scope: ['profile', 'email']
-        // successRedirect: '/',
-        // successFlash: 'Welcome!',
-        // failureRedirect: '/auth/google',
-        // failureFlash: 'Invalid username or password!'
-    }));
+    app.get(
+        '/auth/google/callback', 
+        passport.authenticate('google'),
+        (req, res) => {
+            res.redirect('/surveys');
+        }
+    );
 
     app.get('/api/logout', (req, res) => {
         req.logout();
-        res.send(req.user); // sending back undefined object as proof that user is no longer signed in
+        res.redirect('/');
+        
     });
 
     app.get('/api/current_user', (req, res) => {
