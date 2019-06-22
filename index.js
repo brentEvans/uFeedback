@@ -4,7 +4,8 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
 const bodyParser = require('body-parser');
-require('./models/user'); // must require the user model class BEFORE we require passport file
+require('./models/User'); // must require the user model class BEFORE requiring passport file
+require('./models/Survey');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
@@ -23,8 +24,9 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-require('./routes/authRoutes')(app); // passing app into the function exported in authRoutes.js and invoking
+require('./routes/authRoutes')(app); 
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 if (process.env.NODE_ENV === 'production' ) {
     // Express will serve up production assets like our main.js file, or main.css file
