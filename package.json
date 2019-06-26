@@ -13,8 +13,7 @@
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
-    "webhook": "ssh -o TCPKeepAlive=yes -T -R subdomainlaksdfhoiwef:80:localhost:5000 serveo.net",
-    "webhookV2": "forever sendgrid_webhook.sh"
+    "webhook": "ssh -T -R subdomainlaksdfhoiwef:80:localhost:5000 serveo.net"
   },
   "keywords": [],
   "author": "",
