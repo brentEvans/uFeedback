@@ -4,7 +4,7 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
 const bodyParser = require('body-parser');
-require('./models/User'); // must require the user model class BEFORE requiring passport file, since passport file relies on model class
+require('./models/user'); // must require the user model class BEFORE requiring passport file, since passport file relies on model class
 require('./models/Survey');
 require('./services/passport');
 
