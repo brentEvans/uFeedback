@@ -45,13 +45,3 @@ app.listen(PORT);
 
 
 
-// app.get('/', (req, res) => {
-//     res.send({ hello: 'guy' });
-// });
-
-
-// app.use wires up MIDDLEWARE
-    //small functions used to modify incoming requests before they're sent to route handlers
-        // by wiring up this middleware, we don't have to put the same logic inside each route handler every time
-        // however, middleware can be wired up so that it only affects SOME route handlers
-        
