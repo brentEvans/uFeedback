@@ -11,16 +11,23 @@ const Survey = mongoose.model('surveys');
 
 
 module.exports = app => {
+    app.get('/api/surveys', requireLogin, async (req, res) => {
+        const surveys = await Survey.find({ _user: req.user.id })
+            .select({ recipients: false });
+
+        res.send(surveys);
+    });
+
     app.get('/api/surveys/:surveyId/:choice', (req, res) => {
         res.send(
             `<html>
             <body>
-            <h1 style="margin: 10px auto; width: 265px;">Thanks for voting!</h1>
-            <p style="margin: 0 auto; width: 310px">We appreciate your feedback! Have a nice day!</p>
+                <h1 style="margin: 10px auto; width: 265px;">Thanks for voting!</h1>
+                <p style="margin: 0 auto; width: 310px">We appreciate your feedback! Have a nice day!</p>
             </body>
             </html>`
             );
-    })
+    });
 
     app.post('/api/surveys/webhooks', (req, res) => {
         // use Path (matcher) from path-parser library to attempt to extract surveyId and choice from pathname object

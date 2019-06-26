@@ -9,8 +9,8 @@ import reduxThunk from 'redux-thunk';
 
 import App from './components/App';
 import reducers from './reducers';
-import axios from 'axios'; // testing email functionality without front-end
-window.axios = axios;
+import axios from 'axios'; 
+window.axios = axios; // testing email functionality without front-end
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
