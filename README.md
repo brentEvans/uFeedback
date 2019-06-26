@@ -4,7 +4,7 @@
 
 ## Description:
 Full Stack Web App with MERN Stack (MongoDB, Express, React, Node) that lets users create surveys and send them to a list of email addresses. 
-Uses OAuth for authentication, Stripe API to create mock payments, and SendGrid API to send emails.  Using purchased credits, a user may create and send out surveys and track recipient feedback. 
+Uses OAuth for authentication, Stripe API for mock payments, and SendGrid API to send emails.  Using purchased credits, a user may create and send out surveys and track recipient feedback. 
 
 ## Instructions:
 * Login with Google
