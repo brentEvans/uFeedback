@@ -8,7 +8,7 @@ Uses OAuth for authentication, Stripe API for mock payments, and SendGrid API to
 
 ## Instructions:
 * Login with Google
-* App requires users to maintain a credit balance.  To purchase mock credits, use credit card **4242-4242-4242-4242** with any future expiration date along with any random CVC and email.
+* App requires users to maintain a credit balance.  To purchase mock credits, use credit card **4242-4242-4242-4242** with any future expiration data along with any random CVC and email.
 * Click the red + icon at the bottom right to create a new survey.
 * Fill out the survey form to email the survey to your desired email addresses.
 * Recipients may respond to the survey with a Yes/No option in the email.
