@@ -8,6 +8,14 @@ class SurveyList extends Component {
     }
 
     renderSurveys(surveys) {
+        if (!surveys) {
+            return (
+                <div className="center-align">
+                    <h4>You haven't created any Surveys!</h4>
+                    <h5>Click the + button to get started</h5>
+                </div>
+            );
+        }
         return this.props.surveys.reverse().map(survey => {
             return (
                 <div className="card blue-grey darken-1"key={survey._id}>

@@ -21,7 +21,7 @@ class App extends Component {
                     <React.Fragment>
                         <Header />
                         <Route exact path="/" component={Landing} />
-                        <div class="container">
+                        <div className="container">
                             <Route exact path="/surveys" component={Dashboard} />
                             <Route exact path="/surveys/new" component={SurveyNew} />
                         </div>

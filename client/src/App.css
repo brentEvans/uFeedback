@@ -1,7 +1,4 @@
 
-
-
-
 .Landing {
     background-size: cover;
     margin-top: -40px;
@@ -11,13 +8,8 @@
     color: #ffffff;
     background-image: 
         linear-gradient( rgba(153, 186, 221, .6), rgba(0,0,0, .9) ),
-        url('/images/city-bg.jpg')
+        url('/images/city-bg.jpg');
 }
-
-
-
-
-
 
 .Landing-li{
     list-style-type: square !important;
