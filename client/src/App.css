@@ -10,7 +10,7 @@
     text-align: center;
     color: #ffffff;
     background-image: 
-        linear-gradient( rgba(153, 186, 221, .7), rgba(0,0,0,.5) ),
+        linear-gradient( rgba(153, 186, 221, .6), rgba(0,0,0, .9) ),
         url('/images/city-bg.jpg')
 }
 
