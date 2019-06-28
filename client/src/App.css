@@ -1,0 +1,35 @@
+
+
+
+
+.Landing {
+    background-size: cover;
+    margin-top: -40px;
+    width: 100%;
+    height: 800px;
+    text-align: center;
+    color: #ffffff;
+    background-image: 
+        linear-gradient( rgba(153, 186, 221, .7), rgba(0,0,0,.5) ),
+        url('/images/city-bg.jpg')
+}
+
+
+
+
+
+
+.Landing-li{
+    list-style-type: square !important;
+    font-size: 1.2rem;
+    margin-top: 0.7rem;
+}
+    .Landing-nested-li {
+        list-style-type: circle !important;
+        font-size: 1.2rem;
+        margin: 0.5rem 0 0 3rem;
+    }
+
+.Align-left {
+    text-align: left;
+}
